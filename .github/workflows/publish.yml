@@ -22,6 +22,8 @@ jobs:
       - name: Obtaining name from branch
         shell: bash
         run: echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/})"
+      - name: Set Project for Google Cloud HOPR Association
+        run: gcloud config set project ${{ secrets.GOOGLE_HOPRASSOCIATION_PROJECT }}
       - name: Building Docker image using Google Cloud Build
         run: gcloud builds submit --tag gcr.io/hoprassociation/hopr-websites/hopr-swiss:${{ env.BRANCH_NAME }}
 
@@ -40,6 +42,8 @@ jobs:
       - name: Obtaining name from branch
         shell: bash
         run: echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/})"
+      - name: Set Project for Google Cloud HOPR Association
+        run: gcloud config set project ${{ secrets.GOOGLE_HOPRASSOCIATION_PROJECT }}
       - name: Deploy (preview)
         if: github.ref != 'refs/heads/master'
         run: |-
