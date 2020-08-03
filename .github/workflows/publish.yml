@@ -22,7 +22,7 @@ jobs:
       - name: Set Project for Google Cloud HOPR Association
         run: gcloud config set project ${{ secrets.GOOGLE_HOPRASSOCIATION_PROJECT }}
       - name: Building Docker image using Google Cloud Build
-        run: gcloud builds submit --tag gcr.io/hoprassociation/hopr-websites/hopr-swiss:$GITHUB_SHA
+        run: gcloud builds submit --tag "gcr.io/hoprassociation/hopr-websites/hopr-swiss:$GITHUB_SHA"
 
   deploy:
     name: Deploy HOPR Swiss website
@@ -44,6 +44,6 @@ jobs:
           gcloud run deploy hopr-swiss-dev \
             --quiet \
             --region us-central1 \
-            --image gcr.io/hoprassociation/hopr-websites/hopr-swiss:$GITHUB_SHA \
+            --image "gcr.io/hoprassociation/hopr-websites/hopr-swiss:$GITHUB_SHA" \
             --platform "managed" \
             --allow-unauthenticated
