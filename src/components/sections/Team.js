@@ -174,28 +174,6 @@ const ProfilesCompany = () => {
 
       <div className="tiles-item reveal-from-bottom" data-reveal-container=".tiles-wrap" data-reveal-delay="750">
         <div className="tiles-item-inner">
-          <a href="https://www.linkedin.com/in/kevinleu/" target="_blank" rel="noopener noreferrer">
-            <div className="team-item-header">
-              <div className="team-item-image mb-24">
-                <Image
-                  src={require('@hoprnet/assets/images/team/kevin-leu.png')}
-                  alt="Image of Kevin Leu"
-                  width={180}
-                  height={180}
-                />
-              </div>
-            </div>
-          </a>
-          <div className="team-item-content">
-            <h5 className="team-item-name mt-0 mb-4">Kevin Leu</h5>
-            <div className="team-item-role text-xs fw-500 mb-8">Head of Marketing</div>
-            {/* <p className="m-0 text-sm"></p> */}
-          </div>
-        </div>
-      </div>
-
-      <div className="tiles-item reveal-from-bottom" data-reveal-container=".tiles-wrap" data-reveal-delay="750">
-        <div className="tiles-item-inner">
           <div className="team-item-header">
             <div className="team-item-image mb-24">
               <Image
