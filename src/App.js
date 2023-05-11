@@ -21,6 +21,7 @@ class App extends React.Component {
     const script = insertScript('https://cdn.usefathom.com/script.js')
     script.setAttribute('site', 'OXJHRYAB')
     script.setAttribute('spa', 'auto')
+    script.setAttribute('included-domains', 'hopr.swiss')
   }
 
   // Route change
