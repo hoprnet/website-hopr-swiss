@@ -18,9 +18,10 @@ class App extends React.Component {
     this.refs.scrollReveal.init()
 
     // add fathom analytics
-    const script = insertScript('https://coyote.hopr.swiss/script.js')
+    const script = insertScript('https://cdn-eu.usefathom.com/script.js')
     script.setAttribute('site', 'OXJHRYAB')
     script.setAttribute('spa', 'auto')
+    script.setAttribute('included-domains', 'hopr.swiss')
   }
 
   // Route change
